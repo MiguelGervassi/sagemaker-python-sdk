@@ -1912,7 +1912,7 @@ class FrameworkProcessor(ScriptProcessor):
         patched_inputs = copy(inputs)
         patched_inputs.append(
             ProcessingInput(
-                input_name="code",
+                input_name=f"{self.base_job_name}-code",
                 source=s3_payload,
                 destination="/opt/ml/processing/input/code/",
             )
